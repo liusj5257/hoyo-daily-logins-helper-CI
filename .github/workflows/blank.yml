@@ -41,8 +41,10 @@ jobs:
           echo Add other actions to build,
           echo test, and deploy your project.
           
-      - name: Install hoyo-daily-logins-helper
-        run: pip install hoyo-daily-logins-helper
+      - name: Install requirement
+        run: |
+        pip install onepush
+        pip install hoyo-daily-logins-helper
       - name: daily
         run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
       - name: upload
