@@ -1,4 +1,6 @@
-# hoyo-daily-logins-helper
-document.cookie
-https://act.hoyolab.com/bbs/event/signin/hkrpg/index.html?act_id=e202303301540311
-https://act.hoyolab.com/ys/event/signin-sea-v3/index.html?act_id=e202102251931481
+# hoyo-daily-logins-helper-CI
+
+https://github.com/atomicptr/hoyo-daily-logins-helper
+
+
+![secret](https://user-images.githubusercontent.com/87109954/234761583-54f0944d-ae52-488c-b63f-8faa3845ab70.png)
