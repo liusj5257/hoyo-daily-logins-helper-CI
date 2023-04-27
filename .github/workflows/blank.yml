@@ -5,13 +5,15 @@ name: CI
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the "main" branch
-  push:
-    branches: [ "main" ]
-  pull_request:
-    branches: [ "main" ]
+#   push:
+#     branches: [ "main" ]
+#   pull_request:
+#     branches: [ "main" ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
+  schedule:
+    - cron: '0 8 * * *'
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -42,7 +44,7 @@ jobs:
       - name: Install hoyo-daily-logins-helper
         run: pip install hoyo-daily-logins-helper
       - name: daily
-        run: hoyo-daily-logins-helper --cookie="ltoken=JsaUKwg0Jm9WB3XBHUktZ2JGH0V5yCtbBhGWokQV; ltuid=326213949; cookie_token=3mM3OP0aP5qnpfhxlod129fKZg6ndzpSyvWfqtNA; account_id=326213949'" --starrail
+        run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail
         
         
           
