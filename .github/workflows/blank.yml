@@ -47,6 +47,11 @@ jobs:
          pip install hoyo-daily-logins-helper
       - name: daily
         run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
+      - name: send
+        run: |
+         python send.py
+        env:
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
       - name: upload
         run: |
           month=$(date +'%Y/%m')
@@ -61,9 +66,5 @@ jobs:
           git add "$day.log"
           git commit -m "Save log file"
           git push
-      - name: send
-        run: |
-         python send.py
-        env:
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
+     
           
