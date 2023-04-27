@@ -43,8 +43,8 @@ jobs:
           
       - name: Install requirement
         run: |
-        pip install onepush
-        pip install hoyo-daily-logins-helper
+         pip install onepush
+         pip install hoyo-daily-logins-helper
       - name: daily
         run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
       - name: upload
@@ -59,7 +59,7 @@ jobs:
           git push
       - name: send
         run: |
-        python send.py
+         python send.py
         env:
           PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           
