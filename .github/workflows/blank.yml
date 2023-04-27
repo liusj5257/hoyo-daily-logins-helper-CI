@@ -44,7 +44,7 @@ jobs:
       - name: Install hoyo-daily-logins-helper
         run: pip install hoyo-daily-logins-helper
       - name: daily
-        run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   > output.log
+        run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
       - name: upload
         run: |
           # Configure git
