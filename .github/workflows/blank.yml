@@ -55,5 +55,9 @@ jobs:
           git add output.log
           git commit -m "Save log file"
           git push
-        
+      - name: send
+        run: |
+        python send.py
+        env:
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
           
