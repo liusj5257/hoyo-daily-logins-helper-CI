@@ -49,10 +49,16 @@ jobs:
       - name: daily
         run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
       - name: send
+        env:
+          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}        
+          AGENTID: ${{ secrets.AGENTID }}
+          CORPID: ${{ secrets.CORPID }}
+          CORPSECRET: ${{ secrets.CORPSECRET }}
+          PROVIDER: ${{ secrets.PROVIDER }}
+
         run: |
          python send.py
-        env:
-          PUSH_PLUS_TOKEN: ${{ secrets.PUSH_PLUS_TOKEN }}
+
       - name: upload
         run: |
           month=$(date +'%Y/%m')
