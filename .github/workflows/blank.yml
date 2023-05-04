@@ -46,7 +46,7 @@ jobs:
          pip install onepush
          pip install hoyo-daily-logins-helper
       - name: daily
-        run: LANG=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail   &> output.log
+        run: LANG=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail --debug  &> output.log
       - name: send
         run: |
          python send.py
