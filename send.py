@@ -19,4 +19,8 @@ if "Message: OK" not in log_content:
     # if PROVIDER == 'pushplus':
     #     notify('pushplus', token=PUSH_PLUS_TOKEN, title='星铁签到_Warning', content=log_content)
     # elif PROVIDER == '1':
-        notify('wechatworkapp',corpid=CORPID,corpsecret=CORPSECRET,agentid=AGENTID,title='星铁签到',content=log_content)
+    n = get_notifier('wechatworkapp')
+    print(n.params)    
+    response = n.notify(corpid=CORPID,corpsecret=CORPSECRET,agentid=AGENTID,title='星铁签到',content=log_content)
+    print(response.text)    
+
