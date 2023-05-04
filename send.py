@@ -1,5 +1,7 @@
 import os
 
+print(os.environ)
+
 from onepush import notify
 
 PUSH_PLUS_TOKEN = os.environ['PUSH_PLUS_TOKEN']
