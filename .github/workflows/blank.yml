@@ -64,7 +64,7 @@ jobs:
 
           # Commit and push the log file
           git add "$day.log"
-          git commit -m "Save $day.log file"
+          git commit -m "$day.log"
           git push
      
           
