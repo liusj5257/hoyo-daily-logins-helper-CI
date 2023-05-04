@@ -21,7 +21,8 @@ jobs:
   build:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
-
+    env:
+      LANG: zh-cn
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
     
@@ -46,9 +47,7 @@ jobs:
          pip install onepush
          pip install hoyo-daily-logins-helper
       - name: daily
-        env:
-          LANG: zh-cn
-        run: LANG=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail --debug  &> output.log
+        run: hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail --debug  &> output.log
       - name: send
         run: |
          python send.py
