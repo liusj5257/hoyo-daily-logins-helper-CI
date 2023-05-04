@@ -19,7 +19,7 @@ if "Message: OK" not in log_content:
     n = get_notifier(PROVIDER)
     print(n.params)   
     if PROVIDER == 'pushplus':
-        response = n.notify(token=PUSH_PLUS_TOKEN,title='星铁签到',content=log_content,callbackUrl=WEBHOOK,channel = CHANNEL)
+        response = n.notify(token=PUSH_PLUS_TOKEN,title='星铁签到',content=log_content,webhook=WEBHOOK,channel = CHANNEL)
         print(response.text)    
 
 
