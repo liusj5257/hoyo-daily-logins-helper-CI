@@ -15,7 +15,7 @@ with open('output.log', 'r', encoding='utf-8') as f:
     log_content = f.read()
 
 
-if "Message: OK" not in log_content:
+    #if "Message: OK" not in log_content:
     n = get_notifier(PROVIDER)
     print(n.params)  
 
