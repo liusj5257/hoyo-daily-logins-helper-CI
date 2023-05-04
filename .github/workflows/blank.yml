@@ -55,6 +55,8 @@ jobs:
           CORPID: ${{ secrets.CORPID }}
           CORPSECRET: ${{ secrets.CORPSECRET }}
           PROVIDER: ${{ secrets.PROVIDER }}
+          WEBHOOK: ${{ secrets.WEBHOOK }}
+          CHANNEL: ${{ secrets.CHANNEL }}
 
         run: |
          python send.py
