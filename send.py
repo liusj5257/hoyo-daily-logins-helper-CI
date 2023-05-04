@@ -26,6 +26,5 @@ if "Message: OK" not in log_content:
 
     # 企业微信需要信任IP地址
     elif PROVIDER == 'wechatworkapp':
-        print(n.params)    
         response = n.notify(corpid=CORPID,corpsecret=CORPSECRET,agentid=AGENTID,title='星铁签到',content=log_content)
         print(response.text)
