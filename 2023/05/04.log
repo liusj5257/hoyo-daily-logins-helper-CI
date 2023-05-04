@@ -1,3 +1,10 @@
-[2023-05-04T06:11:34][INFO]: Hoyo Daily Logins Helper
-[2023-05-04T06:11:34][INFO]: If this tool fails, try to update your cookie!
-[2023-05-04T06:11:35][INFO]: Already checked in today
+[2023-05-04T06:22:05][INFO]: Hoyo Daily Logins Helper
+[2023-05-04T06:22:05][INFO]: If this tool fails, try to update your cookie!
+[2023-05-04T06:22:05][DEBUG]: GET https://sg-public-api.hoyolab.com/event/luna/os/info?lang=en-us&act_id=e202303301540311, REQ: 1/2
+[2023-05-04T06:22:05][DEBUG]: Starting new HTTPS connection (1): sg-public-api.hoyolab.com:443
+[2023-05-04T06:22:06][DEBUG]: https://sg-public-api.hoyolab.com:443 "GET /event/luna/os/info?lang=en-us&act_id=e202303301540311 HTTP/1.1" 200 158
+[2023-05-04T06:22:06][DEBUG]: Response: 200
+
+{"retcode":0,"message":"OK","data":{"total_sign_day":4,"today":"2023-05-04","is_sign":true,"is_sub":false,"region":"","sign_cnt_missed":0,"short_sign_day":0}}
+
+[2023-05-04T06:22:06][INFO]: Already checked in today
