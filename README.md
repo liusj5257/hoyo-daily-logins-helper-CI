@@ -10,4 +10,4 @@ https://github.com/y1ndan/onepush/tree/main
 
 未使用到的密钥填None
 
-![secret](https://user-images.githubusercontent.com/87109954/234761583-54f0944d-ae52-488c-b63f-8faa3845ab70.png)
+<img width="500" alt="微信截图_20230504202704" src="https://user-images.githubusercontent.com/87109954/236204115-a074d76e-dd2f-4ca7-a88c-f61d2eff20bb.png">
