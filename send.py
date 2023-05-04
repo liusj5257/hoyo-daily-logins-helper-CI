@@ -2,7 +2,7 @@ import os
 
 print(os.environ)
 
-from onepush import notify
+from onepush import get_notifier
 
 PUSH_PLUS_TOKEN = os.environ['PUSH_PLUS_TOKEN']
 AGENTID = os.environ['AGENTID']
