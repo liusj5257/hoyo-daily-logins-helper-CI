@@ -47,7 +47,7 @@ jobs:
          pip install hoyo-daily-logins-helper
       - name: daily
         env:
-          LANG: ${{ env.LANG }}
+          LANG: zh-cn
         run: LANG=zh-cn hoyo-daily-logins-helper --cookie="${{ secrets.HOYO_COOKIE }}" --starrail --debug  &> output.log
       - name: send
         run: |
