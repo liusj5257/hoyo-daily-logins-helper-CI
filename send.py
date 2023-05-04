@@ -17,15 +17,15 @@ with open('output.log', 'r', encoding='utf-8') as f:
 
 if "Message: OK" not in log_content:
     n = get_notifier(PROVIDER)
-    print(n.params)   
+    print(n.params)  
+
+    # 使用pushplus调用集简云 webhook,推送给企业应用 
     if PROVIDER == 'pushplus':
         response = n.notify(token=PUSH_PLUS_TOKEN,title='星铁签到',content=log_content,webhook=WEBHOOK,channel = CHANNEL)
         print(response.text)    
 
-
-
-    #企业微信需要信任IP地址,改为使用pushplus调用集简云 webhook,推送给企业应用
-    # n = get_notifier(PROVIDER)
-    # print(n.params)    
-    # response = n.notify(corpid=CORPID,corpsecret=CORPSECRET,agentid=AGENTID,title='星铁签到',content=log_content)
-    # print(response.text)
+    # 企业微信需要信任IP地址
+    elif PROVIDER == 'wechatworkapp':
+        print(n.params)    
+        response = n.notify(corpid=CORPID,corpsecret=CORPSECRET,agentid=AGENTID,title='星铁签到',content=log_content)
+        print(response.text)
