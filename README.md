@@ -16,5 +16,5 @@ http://www.pushplus.plus/doc/extend/jijyun.html
 
 #### 推送效果
 
-<img width="500" alt="微信截图" src="https://user-images.githubusercontent.com/87109954/236245459-b117c644-662f-4cce-9258-65708842fa9f.jpg">
+<img width="500" alt="微信截图" src="https://user-images.githubusercontent.com/87109954/236353989-3eecb003-90e9-419f-812f-a1bf3c5ba78d.jpg">
 
